@@ -1,0 +1,116 @@
+baseURL = "http://example.org/"
+# [en, zh-cn, fr, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+# 网站语言，仅在这里 CN 大写
+languageCode = "zh-CN"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 网站标题
+title = "Jam's Note"
+# 网站描述
+description = "jam的博客"
+
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "FixIt"
+
+[params]
+  # FixIt 主题版本
+  version = "0.2.X"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
+    pre = ""
+    # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时，将显示的标题
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 3
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/Lruihao/FixIt/issues/43)
+    noClasses = false
+
+[params.social]
+  [params.social.Mastodon]
+    # 排列图标时的权重（权重越大，图标的位置越靠后）
+    weight = 0
+    # 你的社交 ID
+    id = "jamloveu"
+    # 你的社交链接的前缀
+    prefix = "https://github.com/"
+    # 当鼠标停留在图标上时的提示内容
+    title = "github"
+
+  # Home page config
+  [params.home]
+    #  amount of RSS pages
+    rss = 20
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # FixIt NEW | 0.2.13 Gravatar mirror site domain, default: "www.gravatar.com"
+      gravatarSite = ""
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "/images/avatar.jpg"
+      #  title shown in home page (HTML format is supported)
+      title = "Hi JAM"
+      # subtitle shown in home page
+      subtitle = "一个简简单单的博客。"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      #  disclaimer (HTML format is supported)
+      disclaimer = ""
+    # Home page posts
+    [params.home.posts]
+      enable = true
+      # special amount of posts in each home posts page
+      paginate = 10
+
+
+  [params.search]
+  enable = true
+  # 搜索引擎的类型 ("lunr", "algolia")
+  type = "lunr"
+  # 文章内容最长索引长度
+  contentLength = 4000
+  # 搜索框的占位提示语
+  placeholder = ""
+  # FixIt 新增 | 0.2.1 最大结果数目
+  maxResultLength = 10
+  # FixIt 新增 | 0.2.3 结果内容片段长度
+  snippetLength = 50
+  # FixIt 新增 | 0.2.1 搜索结果中高亮部分的 HTML 标签
+  highlightTag = "em"
+  # FixIt 新增 | 0.2.4 是否在搜索索引中使用基于 baseURL 的绝对路径
+  absoluteURL = false
+  [params.search.algolia]
+    index = ""
+    appID = ""
+    searchKey = ""
