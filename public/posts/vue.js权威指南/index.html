@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>VUE.js 权威指南 (笔记) - Jam&#39;s Note</title><meta name="author" content=": ">
+<meta name="description" content="" />
+<meta name="keywords" content="draft" /><meta itemprop="name" content="VUE.js 权威指南 (笔记)">
+<meta itemprop="description" content=""><meta itemprop="datePublished" content="2019-04-15T01:44:44+08:00" />
+<meta itemprop="dateModified" content="2019-04-15T01:44:44+08:00" />
+<meta itemprop="wordCount" content="1267">
+<meta itemprop="keywords" content="draft," /><meta property="og:title" content="VUE.js 权威指南 (笔记)" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/vue.js%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-04-15T01:44:44+08:00" />
+<meta property="article:modified_time" content="2019-04-15T01:44:44+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="VUE.js 权威指南 (笔记)"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Jam&#39;s Note">
+<meta name="apple-mobile-web-app-title" content="Jam&#39;s Note"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/vue.js%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" /><link rel="prev" href="http://example.org/posts/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/" /><link rel="next" href="http://example.org/posts/%E5%9C%B0%E5%9D%80%E6%A0%8Furl%E4%BC%A0%E5%8F%82/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "VUE.js 权威指南 (笔记)",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/example.org\/posts\/vue.js%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97\/"
+    },"genre": "posts","keywords": "draft","wordcount":  1267 ,
+    "url": "http:\/\/example.org\/posts\/vue.js%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97\/","datePublished": "2019-04-15T01:44:44+08:00","dateModified": "2019-04-15T01:44:44+08:00","publisher": {
+      "@type": "Organization",
+      "name": "jam"},"author": {
+        "@type": "Person",
+        "name": "jam"
+      },"description": ""
+  }
+  </script></head>
+  <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+    <nav>
+      <ul class="menu"><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fas fa-times-circle fa-fw"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fas fa-spinner fa-fw fa-spin"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li>
+      </ul>
+   </nav>
+  </div>
+</header><header class="mobile" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fas fa-times-circle fa-fw"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fas fa-spinner fa-fw fa-spin"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header>
+<div class="search-dropdown desktop">
+  <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+  <div id="search-dropdown-mobile"></div>
+</div>
+<main class="container" page-style="normal"><aside class="toc" id="toc-auto"><h2 class="toc-title">目录</h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside>
+
+  <aside class="aside-custom">
+    
+  </aside>
+
+  <article class="page single"><h1 class="single-title animate__animated animate__flipInX">VUE.js 权威指南 (笔记)</h1><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a
+  href="/"
+  
+    title="Author"
+  
+  
+  
+    rel=" author"
+  
+  
+  
+    class="author"
+  
+  
+><i class="fas fa-user-circle fa-fw"></i>jam</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/draft/"><i class="far fa-folder fa-fw"></i>draft</a></span></div>
+      <div class="post-meta-line"><span title=2019-04-15&#32;01:44:44>
+            <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-04-15" >2019-04-15</time>
+          </span>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1267 字&nbsp;
+        <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+    </div><div class="details toc" id="toc-static" kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#11-mvx模式是什么">1.1 MVX模式是什么</a>
+      <ul>
+        <li><a href="#111-mvc">1.1.1 MVC</a></li>
+        <li><a href="#112-mvp">1.1.2 MVP</a></li>
+        <li><a href="#113-mvvc">1.1.3 MVVC</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-vuejs是什么">1.2 Vue.js是什么</a>
+      <ul>
+        <li><a href="#121-vuejs与其他库的区别">1.2.1 Vue.js与其他库的区别</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#21语法">2.1语法</a>
+      <ul>
+        <li><a href="#211-插值">2.1.1 插值</a></li>
+        <li><a href="#212-表达式">2.1.2 表达式</a></li>
+        <li><a href="#213-指令">2.1.3 指令</a></li>
+      </ul>
+    </li>
+    <li><a href="#22-分割符">2.2 分割符</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#31-内部指令">3.1 内部指令</a>
+      <ul>
+        <li><a href="#311-v-if">3.1.1 v-if</a></li>
+        <li><a href="#312-v-show">3.1.2 v-show</a></li>
+        <li><a href="#313-v-else">3.1.3 v-else</a></li>
+        <li><a href="#314-v-model">3.1.4 v-model</a></li>
+        <li><a href="#314-v-for">3.1.4 v-for</a></li>
+        <li><a href="#316-v-text">3.1.6 v-text</a></li>
+        <li><a href="#317-v-html">3.1.7 v-html</a></li>
+        <li><a href="#318-v-bind">3.1.8 v-bind</a></li>
+        <li><a href="#319-v-on">3.1.9 v-on</a></li>
+      </ul>
+    </li>
+    <li><a href="#heading"></a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>基于Vue.js 1.0, 部分语法在后续版本已经废除.</p>
+<h1 id="第一章-遇见vuejs">第一章 遇见Vue.js</h1>
+<h2 id="11-mvx模式是什么">1.1 MVX模式是什么</h2>
+<p>MVC/MVP/MVVC</p>
+<h3 id="111-mvc">1.1.1 MVC</h3>
+<p>软件架构. Model(模型), Controller(控制器)和View(视图).
+View一般是通过Controller来和Model联系的.基本联系都是单向的.</p>
+<h3 id="112-mvp">1.1.2 MVP</h3>
+<p>从MVC演变而来,基本思想有相同之处: Controller/Presenter负责逻辑的处理,Model提供数据,View负责显示.</p>
+<h3 id="113-mvvc">1.1.3 MVVC</h3>
+<p>相比前两个,MVVC只是把MVC中的 Controller和MVP的Presenter改成了ViewModel.</p>
+<h2 id="12-vuejs是什么">1.2 Vue.js是什么</h2>
+<p>Vue.js不是一个框架(框架的定义不同,原书是这样说的)&ndash;聚焦视图层,构建数据驱动.</p>
+<ol>
+<li>轻量
+体积小,不依赖其他库</li>
+<li>数据绑定</li>
+<li>指令</li>
+<li>插件化</li>
+</ol>
+<h3 id="121-vuejs与其他库的区别">1.2.1 Vue.js与其他库的区别</h3>
+<ol>
+<li>
+<p>与AngularJS的区别</p>
+</li>
+<li>
+<p>与React的区别</p>
+</li>
+</ol>
+<p>&hellip;.</p>
+<h1 id="第二章-数据绑定">第二章 数据绑定</h1>
+<p>数据绑定是将数据与视图想关联,当数据发生变化时,自动更新视图.</p>
+<h2 id="21语法">2.1语法</h2>
+<h3 id="211-插值">2.1.1 插值</h3>
+<p>双大括号<code>{{  }}</code> Mustache标签</p>
+<h3 id="212-表达式">2.1.2 表达式</h3>
+<pre tabindex="0"><code>{{ cents/100 }}  //原值的基础上除以100
+{{ true? 1 : 0 }}  //值为真,则渲染出1, 否则0
+
+</code></pre><h3 id="213-指令">2.1.3 指令</h3>
+<p>带<code>V-</code>前缀的特殊特性</p>
+<h2 id="22-分割符">2.2 分割符</h2>
+<h1 id="第三章-指令directive">第三章 指令(Directive)</h1>
+<h2 id="31-内部指令">3.1 内部指令</h2>
+<h3 id="311-v-if">3.1.1 v-if</h3>
+<p>根据表达式的值在DOM中生成或者移除一个元素.</p>
+<h3 id="312-v-show">3.1.2 v-show</h3>
+<p>根据表达式的值切换元素的dispaly属性.</p>
+<h3 id="313-v-else">3.1.3 v-else</h3>
+<p>必须跟着v-if或者 v-show.
+将v-show用于组件时,因为指令的优先级v-else会出问题.所以不要这么做.</p>
+<h3 id="314-v-model">3.1.4 v-model</h3>
+<p>用来在<code>input/select/text/checkbox/radio</code>等表单控件元素上创建双向数据绑定.</p>
+<p>v-model后面可以添加多个参数(number/lazy/debounce)
+&hellip;</p>
+<h3 id="314-v-for">3.1.4 v-for</h3>
+<p>基于数据源重复渲染元素.可以用 <code>$index</code>来呈现相应的数据索引.例子:</p>
+<pre tabindex="0"><code>&lt;body id=&quot;example&quot;&gt;
+&lt;ul id=&quot;demo&quot;&gt;
+&lt;li v-for=&quot;item in items&quot; class=&quot;item-{{ $index }}&quot;&gt;
+{{ $index }} - {{parentMessage}} {{item.msg}}
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;script&gt;
+var demo = new Vue({
+    el:'#demo',
+    data: {
+        items: [
+            parentMessage: '滴滴',
+            { msg: '滴滴顺风车'},
+            {msg: '滴滴专车'}
+        ]
+    }
+})
+</code></pre><p>效果:</p>
+<pre tabindex="0"><code>&lt;li class-0&gt; 0-滴滴 顺风车 &lt;/li&gt;
+&lt;li class-1&gt; 1-滴滴 专车 &lt;/li&gt;
+</code></pre><p>观察数组变化的变异方法,它们能够触发视图更新.</p>
+<pre tabindex="0"><code>1. push()
+2. pop()
+3. shift()
+4. unshift()
+5. splice()
+6. sort()
+7. reverse()
+</code></pre><p>如果想要重复一个包含多个DOM元素的块,可以使用<code>&lt;template&gt;</code>标签来包装重复片段.
+例子:</p>
+<pre tabindex="0"><code>&lt;ul&gt;
+&lt;template v-for=&quot;list in lists&quot;&gt;
+&lt;li&gt; {{list.msg}} &lt;/li&gt;
+&lt;li class=&quot;divider&quot;&gt; &lt;/li&gt;
+&lt;/template&gt;
+&lt;/ul&gt;
+</code></pre><p>也可以使用v-for便利一个对象,每个重复的实例都有一个特殊的属性<code>$key</code>,或者给对象的键值提供一个别名.</p>
+<pre tabindex="0"><code>&lt;li v-for=&quot;vaule in lists&quot;&gt; {{$key}} : {{value}}
+或者
+&lt;li v-for=&quot;(key,item) in lists2&quot;&gt;{{key}} ;; {{item.msg}}
+
+lists={
+    w:'didi',
+    e:'fe',
+    r: '4'
+}
+
+lists2={
+    one: {msg: 'hello'},
+    two: {msg: 'didi fe'}
+}
+</code></pre><p>效果:</p>
+<pre tabindex="0"><code>w : diid
+e: fe
+r: 4
+或者
+one: hello
+two: didi fe
+</code></pre><p>注意: ES5无法检测到新属性添加到一个对象上或者在对象中删除.
+Vue增加了三种方法:</p>
+<pre tabindex="0"><code>$add(key,value)
+$set(key,value)
+$deleted(key)
+</code></pre><h3 id="316-v-text">3.1.6 v-text</h3>
+<p>key更新元素的textContent</p>
+<h3 id="317-v-html">3.1.7 v-html</h3>
+<p>key更新元素的innerHTML,内容按普通HTML插入&ndash;数据绑定会忽略</p>
+<h3 id="318-v-bind">3.1.8 v-bind</h3>
+<p>用于响应更新HTML特性,将一个或多个attribute,或者一个组件prop动态绑定到表达式.</p>
+<h3 id="319-v-on">3.1.9 v-on</h3>
+<p>用于绑定事件监听器; 使用在普通元素上,只能监听原生DOM事件;使用在自定义元素组件时,也可以监听子组件触发的自定义事件.</p>
+<p>v-on 后面还可以添加修饰符</p>
+<ol>
+<li>.stop</li>
+<li>.prevent</li>
+<li>.capture</li>
+<li>.self</li>
+<li>.{keyCode|keyAlias }</li>
+</ol>
+<h2 id="heading"></h2></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title=2019-04-15&#32;01:44:44>更新于 2019-04-15</span>
+      </div>
+      <div class="post-info-license"></div>
+    </div>
+    <div class="post-info-line">
+      <div class="post-info-md"></div>
+      <div class="post-info-share">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/draft/">draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/" class="prev" rel="prev" title="格式化时间"><i class="fas fa-angle-left fa-fw"></i>格式化时间</a>
+      <a href="/posts/%E5%9C%B0%E5%9D%80%E6%A0%8Furl%E4%BC%A0%E5%8F%82/" class="next" rel="next" title="地址栏URL传参">地址栏URL传参<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/Lruihao/FixIt" target="_blank" rel="external nofollow noopener noreffer" title="FixIt 0.2.14"><img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt</a>
+        </div></div>
+  </footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+        <i class="fas fa-arrow-up fa-fw"></i>
+      </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+        <i class="fas fa-comment fa-fw"></i>
+      </a>
+    </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js" defer></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js" async defer></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{},"enablePWA":null,"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js" defer></script></body>
+</html>

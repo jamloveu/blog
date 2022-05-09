@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>CSS基础入门 - Jam&#39;s Note</title><meta name="author" content=": ">
+<meta name="description" content="" />
+<meta name="keywords" content="draft" /><meta itemprop="name" content="CSS基础入门">
+<meta itemprop="description" content=""><meta itemprop="datePublished" content="2017-04-15T01:40:48+08:00" />
+<meta itemprop="dateModified" content="2017-04-15T01:40:48+08:00" />
+<meta itemprop="wordCount" content="1099">
+<meta itemprop="keywords" content="draft," /><meta property="og:title" content="CSS基础入门" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/css%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-04-15T01:40:48+08:00" />
+<meta property="article:modified_time" content="2017-04-15T01:40:48+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSS基础入门"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Jam&#39;s Note">
+<meta name="apple-mobile-web-app-title" content="Jam&#39;s Note"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/css%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" /><link rel="prev" href="http://example.org/posts/css%E6%BB%9A%E5%8A%A8%E6%9D%A1%E7%BE%8E%E5%8C%96/" /><link rel="next" href="http://example.org/posts/ajax%E8%AF%A6%E8%A7%A3/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "CSS基础入门",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/example.org\/posts\/css%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8\/"
+    },"genre": "posts","keywords": "draft","wordcount":  1099 ,
+    "url": "http:\/\/example.org\/posts\/css%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8\/","datePublished": "2017-04-15T01:40:48+08:00","dateModified": "2017-04-15T01:40:48+08:00","publisher": {
+      "@type": "Organization",
+      "name": "jam"},"author": {
+        "@type": "Person",
+        "name": "jam"
+      },"description": ""
+  }
+  </script></head>
+  <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+    <nav>
+      <ul class="menu"><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fas fa-times-circle fa-fw"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fas fa-spinner fa-fw fa-spin"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li>
+      </ul>
+   </nav>
+  </div>
+</header><header class="mobile" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fas fa-times-circle fa-fw"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fas fa-spinner fa-fw fa-spin"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header>
+<div class="search-dropdown desktop">
+  <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+  <div id="search-dropdown-mobile"></div>
+</div>
+<main class="container" page-style="normal"><aside class="toc" id="toc-auto"><h2 class="toc-title">目录</h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside>
+
+  <aside class="aside-custom">
+    
+  </aside>
+
+  <article class="page single"><h1 class="single-title animate__animated animate__flipInX">CSS基础入门</h1><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a
+  href="/"
+  
+    title="Author"
+  
+  
+  
+    rel=" author"
+  
+  
+  
+    class="author"
+  
+  
+><i class="fas fa-user-circle fa-fw"></i>jam</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/draft/"><i class="far fa-folder fa-fw"></i>draft</a></span></div>
+      <div class="post-meta-line"><span title=2017-04-15&#32;01:40:48>
+            <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2017-04-15" >2017-04-15</time>
+          </span>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1099 字&nbsp;
+        <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+    </div><div class="details toc" id="toc-static" kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#层叠样式表英语cascading-style-sheets简写css">层叠样式表（英语：Cascading Style Sheets，简写CSS）</a></li>
+    <li><a href="#发展历史">发展历史：</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#浮动">浮动</a></li>
+    <li><a href="#清除浮动">清除浮动</a>
+      <ul>
+        <li><a href="#display和visibility">display和visibility</a></li>
+        <li><a href="#css的选择器">css的选择器</a></li>
+        <li><a href="#字体样式">字体样式</a></li>
+        <li><a href="#外观">外观</a></li>
+        <li><a href="#隐藏样式">隐藏样式</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="层叠样式表英语cascading-style-sheets简写css">层叠样式表（英语：Cascading Style Sheets，简写CSS）</h2>
+<h2 id="发展历史">发展历史：</h2>
+<ol>
+<li>
+<p>两个人合作发明了 CSS
+1994年哈肯·维姆·莱提出了CSS的最初建议。伯特·波斯（Bert Bos）当时正在设计一个叫做“Argo”的浏览器，他们决定一起合作设计CSS。
+W3C 开始接管 CSS</p>
+</li>
+<li>
+<p>1997年初，W3C内组织了专门管CSS的工作组，其负责人是克里斯·里雷。
+CSS 2.1</p>
+</li>
+<li>
+<p>1998年5月W3C发表了CSS2
+CSS2.1修改了CSS2中的一些错误，删除了其中基本不被支持的内容和增加了一些已有的浏览器的扩展内容。</p>
+</li>
+<li>
+<p>CSS 3
+从 2011 年开始 CSS 被分为多个模块单独升级，统称为 CSS 3。这些模块有：
+CSS 选择器 level 3
+CSS 媒体查询 level 3
+CSS Color level 3
+更多请 搜索 CSS spec</p>
+</li>
+<li>
+<p>CSS 4?
+不好意思，没有 CSS 4，只有各个模块的 level 4</p>
+</li>
+</ol>
+<p>CSS 学习资源</p>
+<ol>
+<li>Google: 关键词 MDN</li>
+<li>CSS Tricks <a
+  href="https://css-tricks.com/"
+  
+  
+    
+    
+    target="_blank"
+  
+  
+    rel="external nofollow noopener noreffer"
+  
+  
+  
+  
+>https://css-tricks.com/</a></li>
+<li>Google: 阮一峰 css <a
+  href="https://www.google.com/search?q=%E9%98%AE%E4%B8%80%E5%B3%B0&#43;css"
+  
+  
+    
+    
+    target="_blank"
+  
+  
+    rel="external nofollow noopener noreffer"
+  
+  
+  
+  
+>https://www.google.com/search?q=%E9%98%AE%E4%B8%80%E5%B3%B0+css</a></li>
+<li>张鑫旭的 240 多篇 CSS 博客 <a
+  href="https://www.zhangxinxu.com/wordpress/category/css/page/25/"
+  
+  
+    
+    
+    target="_blank"
+  
+  
+    rel="external nofollow noopener noreffer"
+  
+  
+  
+  
+>https://www.zhangxinxu.com/wordpress/category/css/page/25/</a></li>
+<li>Codrops 炫酷 CSS 效果 <a
+  href="https://tympanus.net/codrops/category/playground/"
+  
+  
+    
+    
+    target="_blank"
+  
+  
+    rel="external nofollow noopener noreffer"
+  
+  
+  
+  
+>https://tympanus.net/codrops/category/playground/</a></li>
+<li>CSS揭秘 <a
+  href="http://www.ituring.com.cn/book/1695"
+  
+  
+    
+    
+    target="_blank"
+  
+  
+    rel="external nofollow noopener noreffer"
+  
+  
+  
+  
+>http://www.ituring.com.cn/book/1695</a></li>
+<li>CSS 2.1 中文 spec</li>
+<li>Magic of CSS 免费在线书 <a
+  href="https://adamschwartz.co/magic-of-css/"
+  
+  
+    
+    
+    target="_blank"
+  
+  
+    rel="external nofollow noopener noreffer"
+  
+  
+  
+  
+>https://adamschwartz.co/magic-of-css/</a></li>
+</ol>
+<h1 id="css布局">css布局</h1>
+<h2 id="浮动">浮动</h2>
+<p>通过在元素身上加：<code>float: left/right;</code>，达到元素横向排列的目的。</p>
+<h2 id="清除浮动">清除浮动</h2>
+<p>浮动元素不再占有文档流的位置，因此会对后面元素的排版造成影响。
+清除浮动的几种常用方式：</p>
+<ol>
+<li>额外标签法</li>
+<li>父级添加overflow属性方法</li>
+<li>使用after伪元素清除</li>
+<li>使用before和after双伪元素清除</li>
+</ol>
+<p>一、 额外标签法：</p>
+<pre tabindex="0"><code>是W3C推荐的做法是通过在浮动元素末尾添加一个空的标签例如 &lt;div style=”clear:both”&gt;&lt;/div&gt;，或则其他标签br等亦可。
+</code></pre><p>结构较差，不推荐</p>
+<p>二、 父级添加overflow属性方法</p>
+<pre tabindex="0"><code>可以给父级添加： overflow 为 hidden|auto|scroll  都可以实现。
+</code></pre><p>三、 使用after伪元素清除
+浮动元素的父元素身上加 <code>clearfix</code></p>
+<pre tabindex="0"><code> .clearfix:after {  content: &quot;&quot;; display: block; height: 0; clear: both; visibility: hidden;  }   
+
+ .clearfix {*zoom: 1;}   /* IE6、7 专有 */
+</code></pre><p>或者这样写</p>
+<pre tabindex="0"><code>clearfix:after{
+content: '';
+dispaly: block;
+clear: both;
+}
+</code></pre><p>四、 使用before和after双伪元素清除
+和三一样，在浮动元素父元素身上加<code>clearfix</code></p>
+<pre tabindex="0"><code>.clearfix:before,.clearfix:after { 
+  content:&quot;&quot;;
+  display:table;  /* 这句话可以触发BFC BFC可以清除浮动 */
+}
+.clearfix:after {
+ clear:both;
+}
+.clearfix {
+  *zoom:1;
+}
+</code></pre><h3 id="display和visibility">display和visibility</h3>
+<p>&hellip;</p>
+<hr>
+<h3 id="css的选择器">css的选择器</h3>
+<ol>
+<li>标签</li>
+<li>类名</li>
+<li>多类名</li>
+<li>id选择器</li>
+<li>通配符选择器</li>
+<li>伪类和伪元素选择器</li>
+<li>其他</li>
+</ol>
+<h3 id="字体样式">字体样式</h3>
+<ol>
+<li><strong>font-size</strong><code>单位：em（相对尺寸）、px（像素）、in（英寸）、cm（厘米）、mm（毫米）、pt（点）</code></li>
+<li><strong>font-family</strong></li>
+<li><strong>font-weight</strong> <code>字体粗细，normal(400)、bold(700)、bolder、lighter、100~900（100的整数倍）</code></li>
+<li><strong>综合：font: font-style  font-weight  font-size/line-height  font-family;</strong></li>
+</ol>
+<h3 id="外观">外观</h3>
+<ol>
+<li><strong>color</strong></li>
+<li><strong>line-height 行间距</strong></li>
+<li><strong>text-align</strong>  <code>left/right/center</code></li>
+<li><strong>text-indent 首行缩进</strong></li>
+<li><strong>text-decoration文本装饰</strong>  <code>none/underline下划线/overline线在上/line-through线在中间</code></li>
+<li></li>
+</ol>
+<h3 id="隐藏样式">隐藏样式</h3>
+<ol>
+<li>display: none</li>
+<li>display: block ;  显示的意思</li>
+<li>visibility: hidden;</li>
+<li>visibility: visible  显示的意思</li>
+<li>display  隐藏不占位置</li>
+<li>visibility:hidden 隐藏占有位置   停职留心</li>
+<li>overflow:hidden;   隐藏超出的部分。</li>
+</ol></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title=2017-04-15&#32;01:40:48>更新于 2017-04-15</span>
+      </div>
+      <div class="post-info-license"></div>
+    </div>
+    <div class="post-info-line">
+      <div class="post-info-md"></div>
+      <div class="post-info-share">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/draft/">draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/css%E6%BB%9A%E5%8A%A8%E6%9D%A1%E7%BE%8E%E5%8C%96/" class="prev" rel="prev" title="CSS滚动条美化"><i class="fas fa-angle-left fa-fw"></i>CSS滚动条美化</a>
+      <a href="/posts/ajax%E8%AF%A6%E8%A7%A3/" class="next" rel="next" title="AJAX详解">AJAX详解<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/Lruihao/FixIt" target="_blank" rel="external nofollow noopener noreffer" title="FixIt 0.2.14"><img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt</a>
+        </div></div>
+  </footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+        <i class="fas fa-arrow-up fa-fw"></i>
+      </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+        <i class="fas fa-comment fa-fw"></i>
+      </a>
+    </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js" defer></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js" async defer></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{},"enablePWA":null,"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js" defer></script></body>
+</html>

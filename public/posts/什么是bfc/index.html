@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>什么是BFC - Jam&#39;s Note</title><meta name="author" content=": ">
+<meta name="description" content="" />
+<meta name="keywords" content="draft" /><meta itemprop="name" content="什么是BFC">
+<meta itemprop="description" content=""><meta itemprop="datePublished" content="2019-04-15T01:42:16+08:00" />
+<meta itemprop="dateModified" content="2019-04-15T01:42:16+08:00" />
+<meta itemprop="wordCount" content="1470">
+<meta itemprop="keywords" content="draft," /><meta property="og:title" content="什么是BFC" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E4%BB%80%E4%B9%88%E6%98%AFbfc/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-04-15T01:42:16+08:00" />
+<meta property="article:modified_time" content="2019-04-15T01:42:16+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="什么是BFC"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Jam&#39;s Note">
+<meta name="apple-mobile-web-app-title" content="Jam&#39;s Note"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/%E4%BB%80%E4%B9%88%E6%98%AFbfc/" /><link rel="prev" href="http://example.org/posts/%E5%8D%95%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E5%92%8C%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA/" /><link rel="next" href="http://example.org/posts/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "什么是BFC",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/example.org\/posts\/%E4%BB%80%E4%B9%88%E6%98%AFbfc\/"
+    },"genre": "posts","keywords": "draft","wordcount":  1470 ,
+    "url": "http:\/\/example.org\/posts\/%E4%BB%80%E4%B9%88%E6%98%AFbfc\/","datePublished": "2019-04-15T01:42:16+08:00","dateModified": "2019-04-15T01:42:16+08:00","publisher": {
+      "@type": "Organization",
+      "name": "jam"},"author": {
+        "@type": "Person",
+        "name": "jam"
+      },"description": ""
+  }
+  </script></head>
+  <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+    <nav>
+      <ul class="menu"><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fas fa-times-circle fa-fw"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fas fa-spinner fa-fw fa-spin"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li>
+      </ul>
+   </nav>
+  </div>
+</header><header class="mobile" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fas fa-times-circle fa-fw"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fas fa-spinner fa-fw fa-spin"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header>
+<div class="search-dropdown desktop">
+  <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+  <div id="search-dropdown-mobile"></div>
+</div>
+<main class="container" page-style="normal"><aside class="toc" id="toc-auto"><h2 class="toc-title">目录</h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside>
+
+  <aside class="aside-custom">
+    
+  </aside>
+
+  <article class="page single"><h1 class="single-title animate__animated animate__flipInX">什么是BFC</h1><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a
+  href="/"
+  
+    title="Author"
+  
+  
+  
+    rel=" author"
+  
+  
+  
+    class="author"
+  
+  
+><i class="fas fa-user-circle fa-fw"></i>jam</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/draft/"><i class="far fa-folder fa-fw"></i>draft</a></span></div>
+      <div class="post-meta-line"><span title=2019-04-15&#32;01:42:16>
+            <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-04-15" >2019-04-15</time>
+          </span>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1470 字&nbsp;
+        <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;</div>
+    </div><div class="details toc" id="toc-static" kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#css规范中对-bfc-的描述">CSS规范中对 BFC 的描述</a></li>
+    <li><a href="#mdn-对-bfc-的描述">MDN 对 BFC 的描述</a></li>
+    <li><a href="#张鑫旭对-bfc-的描述">张鑫旭对 BFC 的描述</a></li>
+    <li><a href="#妈的bfc-到底是什么">妈的，BFC 到底是什么？</a></li>
+    <li><a href="#功能1爸爸管儿子">功能1：爸爸管儿子</a></li>
+    <li><a href="#功能2兄弟之间划清界限">功能2：兄弟之间划清界限</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><p>昨天晚上看了BFC，写笔记记录一下。</p>
+<h2 id="css规范中对-bfc-的描述">CSS规范中对 BFC 的描述</h2>
+<p>9.4.1 块格式化上下文（Block Formatting Context，BFC）</p>
+<p>浮动，绝对定位元素，非块盒的块容器（例如，inline-blocks，table-cells和table-captions）和&rsquo;overflow&rsquo;不为&rsquo;visible&rsquo;的块盒会为它们的内容建立一个新的块格式化上下文</p>
+<p>在一个块格式化上下文中，盒在竖直方向一个接一个地放置，从包含块的顶部开始。两个兄弟盒之间的竖直距离由&rsquo;margin&rsquo;属性决定。同一个块格式化上下文中的相邻块级盒之间的竖直margin会合并</p>
+<p>在一个块格式化上下文中，每个盒的left外边（left outer edge）挨着包含块的left边（对于从右向左的格式化，right边挨着）。即使存在浮动（尽管一个盒的行盒可能会因为浮动收缩），这也成立。除非该盒建立了一个新的块格式化上下文（这种情况下，该盒自身可能会因为浮动变窄）</p>
+<h2 id="mdn-对-bfc-的描述">MDN 对 BFC 的描述</h2>
+<p>一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。</p>
+<p>一个块格式化上下文由以下之一创建：</p>
+<ul>
+<li>根元素或其它包含它的元素</li>
+<li>浮动元素 (元素的 float 不是 none)</li>
+<li>绝对定位元素 (元素具有 position 为 absolute 或 fixed)</li>
+<li>内联块 (元素具有 display: inline-block)</li>
+<li>表格单元格 (元素具有 display: table-cell，HTML表格单元格默认属性)</li>
+<li>表格标题 (元素具有 display: table-caption, HTML表格标题默认属性)</li>
+<li>具有overflow 且值不是 visible 的块元素，</li>
+<li>display: flow-root</li>
+<li>column-span: all 应当总是会创建一个新的格式化上下文，即便具有 column-span: all 的元素并不被包裹在一个多列容器中。</li>
+</ul>
+<p>一个块格式化上下文包括创建它的元素内部所有内容，除了被包含于创建新的块级格式化上下文的后代元素内的元素。</p>
+<p>块格式化上下文对于定位 (参见 float) 与清除浮动 (参见 clear) 很重要。定位和清除浮动的样式规则只适用于处于同一块格式化上下文内的元素。浮动不会影响其它块格式化上下文中元素的布局，并且清除浮动只能清除同一块格式化上下文中在它前面的元素的浮动。</p>
+<h2 id="张鑫旭对-bfc-的描述">张鑫旭对 BFC 的描述</h2>
+<p><code>http://www.zhangxinxu.com/wordpress/2015/02/css-deep-understand-flow-bfc-column-two-auto-layout/</code></p>
+<p>BFC全称”Block Formatting Context”, 中文为“块级格式化上下文”。啪啦啪啦特性什么的，一言难尽，大家可以自行去查找，我这里不详述，免得乱了主次，总之，记住这么一句话：BFC元素特性表现原则就是，内部子元素再怎么翻江倒海，翻云覆雨都不会影响外部的元素。所以，避免margin穿透啊，清除浮动什么的也好理解了</p>
+<p>emmmmm，全部没看懂！</p>
+<h2 id="妈的bfc-到底是什么">妈的，BFC 到底是什么？</h2>
+<p>先思考一个问题：</p>
+<p>请问：什么是色情？</p>
+<p>联邦最高法院大法官斯图尔特更有一句名言：</p>
+<p>我不知道什么是色情，不过，我看了之后，就能知道</p>
+<p><code>I know it when I see it</code></p>
+<p>类似地：</p>
+<ol>
+<li>我不知道什么是 BFC</li>
+<li>但是你写出样式，我就知道这是不是 BFC</li>
+</ol>
+<p>BFC 就是这样的东西（堆叠上下文也是）</p>
+<ol>
+<li>它没有定义</li>
+<li>它只有特性/功能</li>
+</ol>
+<h2 id="功能1爸爸管儿子">功能1：爸爸管儿子</h2>
+<p>用 BFC 包住浮动元素。(这 TM 不是清除浮动，.clearfix 才是清除浮动）</p>
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+  &lt;style&gt;
+    .baba{
+      border: 10px solid red;
+      min-height: 10px;
+      /*触发BFC的条件*/
+      /* display: flow-root;  */
+      /*display: inline-block;*/
+      /*float: left;*/
+      /*position: absolute;*/
+      overflow: auto;
+      
+    }
+    .erzi{
+      background: green;
+      float:left;
+      width: 300px;
+      height: 100px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;baba&quot;&gt;
+    &lt;div class=&quot;erzi&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p><code>演示地址：http://js.jirengu.com/rozaxufetu/1/edit?html,css,output</code></p>
+<h2 id="功能2兄弟之间划清界限">功能2：兄弟之间划清界限</h2>
+<p>用 float + div 做左右自适应布局</p>
+<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;JS Bin&lt;/title&gt;
+  &lt;style&gt;
+    .gege{
+      width: 100px;
+      min-height: 600px;
+      border: 3px solid red;
+      float: left;
+      margin-right: 20px;
+    }
+    .didi{
+      min-height: 600px;
+      border: 5px solid green;
+      display: flow-root;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;gege&quot;&gt;gege&lt;/div&gt;
+  &lt;div class=&quot;didi&quot;&gt;1234&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p><code>演示地址：http://js.jirengu.com/felikenuve/1/edit?html,css,output</code></p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title=2019-04-15&#32;01:42:16>更新于 2019-04-15</span>
+      </div>
+      <div class="post-info-license"></div>
+    </div>
+    <div class="post-info-line">
+      <div class="post-info-md"></div>
+      <div class="post-info-share">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/draft/">draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/%E5%8D%95%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA%E5%92%8C%E5%A4%9A%E8%A1%8C%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA/" class="prev" rel="prev" title="CSS:单行文本溢出和多行文本溢出"><i class="fas fa-angle-left fa-fw"></i>CSS:单行文本溢出和多行文本溢出</a>
+      <a href="/posts/%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%B6%E9%97%B4/" class="next" rel="next" title="格式化时间">格式化时间<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/Lruihao/FixIt" target="_blank" rel="external nofollow noopener noreffer" title="FixIt 0.2.14"><img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt</a>
+        </div></div>
+  </footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+        <i class="fas fa-arrow-up fa-fw"></i>
+      </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+        <i class="fas fa-comment fa-fw"></i>
+      </a>
+    </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js" defer></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js" async defer></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{},"enablePWA":null,"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js" defer></script></body>
+</html>

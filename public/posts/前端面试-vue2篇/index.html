@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>前端面试--Vue2 - Jam&#39;s Note</title><meta name="author" content=": ">
+<meta name="description" content="" />
+<meta name="keywords" content="draft" /><meta itemprop="name" content="前端面试--Vue2">
+<meta itemprop="description" content=""><meta itemprop="datePublished" content="2022-04-16T00:18:04+08:00" />
+<meta itemprop="dateModified" content="2022-04-16T00:18:04+08:00" />
+<meta itemprop="wordCount" content="1562">
+<meta itemprop="keywords" content="draft," /><meta property="og:title" content="前端面试--Vue2" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-16T00:18:04+08:00" />
+<meta property="article:modified_time" content="2022-04-16T00:18:04+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="前端面试--Vue2"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="Jam&#39;s Note">
+<meta name="apple-mobile-web-app-title" content="Jam&#39;s Note"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="canonical" href="http://example.org/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87/" /><link rel="prev" href="http://example.org/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-js%E7%AF%87/" /><link rel="next" href="http://example.org/posts/typescript%E6%95%99%E7%A8%8B1%E7%B1%BB%E5%9E%8B/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "前端面试--Vue2",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http:\/\/example.org\/posts\/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87\/"
+    },"genre": "posts","keywords": "draft","wordcount":  1562 ,
+    "url": "http:\/\/example.org\/posts\/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87\/","datePublished": "2022-04-16T00:18:04+08:00","dateModified": "2022-04-16T00:18:04+08:00","publisher": {
+      "@type": "Organization",
+      "name": "jam"},"author": {
+        "@type": "Person",
+        "name": "jam"
+      },"description": ""
+  }
+  </script></head>
+  <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+    <nav>
+      <ul class="menu"><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+              
+            >
+              <a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fas fa-search fa-fw"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fas fa-times-circle fa-fw"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fas fa-spinner fa-fw fa-spin"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li>
+      </ul>
+   </nav>
+  </div>
+</header><header class="mobile" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="Jam&#39;s Note"><span class="header-title-text">Jam&#39;s Note</span></a></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容 ..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fas fa-times-circle fa-fw"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fas fa-spinner fa-fw fa-spin"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/posts/"
+                
+                
+              >文章</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/categories/"
+                
+                
+              >分类</a></li><li
+              class="menu-item"
+            ><a
+                class="menu-link"
+                href="/tags/"
+                
+                
+              >标签</a></li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fas fa-adjust fa-fw"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header>
+<div class="search-dropdown desktop">
+  <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+  <div id="search-dropdown-mobile"></div>
+</div>
+<main class="container" page-style="normal"><aside class="toc" id="toc-auto"><h2 class="toc-title">目录</h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside>
+
+  <aside class="aside-custom">
+    
+  </aside>
+
+  <article class="page single"><h1 class="single-title animate__animated animate__flipInX">前端面试--Vue2</h1><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><a
+  href="/"
+  
+    title="Author"
+  
+  
+  
+    rel=" author"
+  
+  
+  
+    class="author"
+  
+  
+><i class="fas fa-user-circle fa-fw"></i>jam</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/draft/"><i class="far fa-folder fa-fw"></i>draft</a></span></div>
+      <div class="post-meta-line"><span title=2022-04-16&#32;00:18:04>
+            <i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2022-04-16" >2022-04-16</time>
+          </span>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1562 字&nbsp;
+        <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;</div>
+    </div><div class="details toc" id="toc-static" kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fas fa-angle-right"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#vue2的生命周期钩子有哪些数据请求放在哪个钩子">Vue2的生命周期钩子有哪些？数据请求放在哪个钩子？</a></li>
+    <li><a href="#vue2-组件间通信方式有哪些">Vue2 组件间通信方式有哪些？</a></li>
+    <li><a href="#vuex-用过吗怎么理解">Vuex 用过吗？怎么理解？</a></li>
+    <li><a href="#vuerouter-用过吗怎么理解">VueRouter 用过吗？怎么理解？</a></li>
+    <li><a href="#vue2-是如何实现双向绑定的">Vue2 是如何实现双向绑定的？</a></li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="vue2的生命周期钩子有哪些数据请求放在哪个钩子">Vue2的生命周期钩子有哪些？数据请求放在哪个钩子？</h2>
+<p><img
+    class="lazyload"
+    src="/svg/loading.min.svg"
+    data-src="images/lifecycle.png"
+    data-srcset="/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87/images/lifecycle.png, images/lifecycle.png 1.5x, /posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87/images/lifecycle.png 2x"
+    data-sizes="auto"
+    alt="/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87/images/lifecycle.png"
+    title="/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-vue2%E7%AF%87/images/lifecycle.png" /></p>
+<ul>
+<li>vue2文档写的很清楚，红色空心框重的文字皆为生命周期钩子：</li>
+</ul>
+<ol>
+<li>create x2 （before + ed）</li>
+<li>mount x2</li>
+<li>update x2</li>
+<li>destroy x2</li>
+</ol>
+<p>还有三个写在钩子文档里：</p>
+<ol>
+<li>activated</li>
+<li>deactivated</li>
+<li>errCaptured 一般业务用不到，做组件封装可能会用，错位上报。</li>
+</ol>
+<p>请求要放在mounted里面，因为放在其他地方都不合适。</p>
+<p>为什么不在create里面用？SSR会执行created。
+因为如果用到SSR，后端会执行一次，前端又会执行一次，不符合我们的预期，不应该在后端执行一次。</p>
+<p>mount不会在后端执行，只会在前端执行。</p>
+<p>为什么不在update中执行？因为update触发的太频繁了，一般请求只请求一次。</p>
+<p>为什么不在destory中？组件销毁时不可能。</p>
+<h2 id="vue2-组件间通信方式有哪些">Vue2 组件间通信方式有哪些？</h2>
+<ol>
+<li>父子组件：使用【props和emit事件】进行通信</li>
+<li>爷孙组件：</li>
+</ol>
+<ul>
+<li>a) 使用两次父子组件通信来实现</li>
+<li>b) 使用依赖注入【provide + inject】来通信</li>
+</ul>
+<ol start="3">
+<li>任意组件：使用eventBus = new vue() 来通信</li>
+</ol>
+<ul>
+<li>a) 主要API是eventBus.$on和eventBus.$emit</li>
+<li>b) 缺点是事件多了就很乱，难以维护</li>
+</ul>
+<ol start="4">
+<li>任意组件：使用Vuex通信（Vue3可用Pinia代替Vuex）</li>
+</ol>
+<h2 id="vuex-用过吗怎么理解">Vuex 用过吗？怎么理解？</h2>
+<ol>
+<li>背下文档的第一句话：Vuex是一个专门为 Vue.js应用程序开发的 状态管理模式+库。（状态管理的库）</li>
+<li>说出核心概念的名字和作用：store、State、Getter、Mutation、Action、Module</li>
+</ol>
+<ul>
+<li>store 是一个大容器，带有一个mapState辅助函数</li>
+<li>State 用来读取派生状态，附有一个mapGetters 辅助函数</li>
+<li>Mutation 用于同步提交状态变更，附有一个mapMutation辅助函数</li>
+<li>Action 用于异步变更状态，但它提交的是 mutation，而不是直接变更状态。
+Module 用于给store划分模块，方便维护代码。</li>
+</ul>
+<p>常见追问：Mutation和Action为什么要分开？
+答案：为了让代码更易于维护。（可是Pinia就把Mutation和Action合并了）</p>
+<h2 id="vuerouter-用过吗怎么理解">VueRouter 用过吗？怎么理解？</h2>
+<ol>
+<li>背下文档第一句话：VueRouter是Vue.js的官方路由。它和Vue.js核心深度集成，让用Vue.js构建单页应用变得轻而易举。</li>
+<li>说出核心概念的名字和作用：router-link、router-view、嵌套路由、Hash模式和History模式、导航守卫、懒加载</li>
+</ol>
+<ul>
+<li>router-link：点击跳转</li>
+<li>router-view：用来容纳路由的视图</li>
+<li>嵌套路由：路由加一个children</li>
+<li>导航守卫：用来通过跳转或取消的方式守卫导航</li>
+<li>懒加载：<code>import('xxxx')</code></li>
+</ul>
+<ol start="3">
+<li>常见追问：</li>
+</ol>
+<ul>
+<li>Hash模式和History模式的区别？a. 一个用的是Hash一个用的是History API。b. 一个不需要后端nginx配合，一个需要（History需要）</li>
+<li>导航守卫如何实现登录控制？</li>
+</ul>
+<pre tabindex="0"><code>router.beforeEach((to, from, next) =&gt; {
+  if (to.path === '/login') return next()
+  if (to是受控页面 &amp;&amp; 没有登录) return next('/login?return_to=' + encodeURIComponent(to.path))
+  next()
+})
+</code></pre><p>推荐阅读：https://blog.csdn.net/sinat_36521655/article/details/106125910</p>
+<h2 id="vue2-是如何实现双向绑定的">Vue2 是如何实现双向绑定的？</h2>
+<ol>
+<li>一般使用 <code>v-model</code> 或者 <code>.sync</code>(已废弃，合并为v-model)实现，<code>v-model</code>是<code>v-bind:value</code>和<code>v-on:input</code>的语法糖</li>
+</ol>
+<ul>
+<li>(a) <code>v-bind:value</code>实现了data -&gt; UI的单项绑定</li>
+<li>(b) <code>v-on:input</code>实现了UI -&gt; data 的单向绑定</li>
+<li>(c) 加起来就是双向绑定了。</li>
+</ul>
+<ol start="2">
+<li>这两个单向绑定是如何实现的呢？</li>
+</ol>
+<ul>
+<li>(a) 前者是通过 Object.defineProperty API 给data的每个属性递归的创建getter和setter进行劫持（监听），用来监听data的改变，data一变就会安排改变UI。</li>
+<li>(b) 后者通过 template compiler 给DOM天剑事件监听，DOM input的值变了就回去修改data。</li>
+</ul>
+<p>推荐阅读：https://www.cnblogs.com/canfoo/p/6891868.html</p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title=2022-04-16&#32;00:18:04>更新于 2022-04-16</span>
+      </div>
+      <div class="post-info-license"></div>
+    </div>
+    <div class="post-info-line">
+      <div class="post-info-md"></div>
+      <div class="post-info-share">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/draft/">draft</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div>
+
+  <div class="post-nav"><a href="/posts/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95-js%E7%AF%87/" class="prev" rel="prev" title="前端面试--js篇"><i class="fas fa-angle-left fa-fw"></i>前端面试--js篇</a>
+      <a href="/posts/typescript%E6%95%99%E7%A8%8B1%E7%B1%BB%E5%9E%8B/" class="next" rel="next" title="TypeScript教程1（类型）">TypeScript教程1（类型）<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/Lruihao/FixIt" target="_blank" rel="external nofollow noopener noreffer" title="FixIt 0.2.14"><img class="fixit-icon" src="/images/fixit.svg" alt="FixIt logo" /> FixIt</a>
+        </div></div>
+  </footer></div>
+
+    <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+        <i class="fas fa-arrow-up fa-fw"></i>
+      </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+        <i class="fas fa-comment fa-fw"></i>
+      </a>
+    </div><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js" defer></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js" defer></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js" async defer></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{},"enablePWA":null,"search":{"highlightTag":"em","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js" defer></script></body>
+</html>

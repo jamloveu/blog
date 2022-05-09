@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Tags - 标签 - Jam&#39;s Note</title>
+    <link>http://example.org/tags/</link>
+    <description>Tags - 标签 - Jam&#39;s Note</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 22 Apr 2022 19:20:30 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+  <title>git</title>
+  <link>http://example.org/tags/git/</link>
+  <pubDate>Fri, 22 Apr 2022 19:20:30 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://example.org/tags/git/</guid>
+  <description><![CDATA[]]></description>
+</item><item>
+  <title>TypeScript</title>
+  <link>http://example.org/tags/typescript/</link>
+  <pubDate>Wed, 20 Apr 2022 22:44:41 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://example.org/tags/typescript/</guid>
+  <description><![CDATA[]]></description>
+</item><item>
+  <title>draft</title>
+  <link>http://example.org/tags/draft/</link>
+  <pubDate>Sat, 16 Apr 2022 00:18:04 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://example.org/tags/draft/</guid>
+  <description><![CDATA[]]></description>
+</item><item>
+  <title>浏览器兼容</title>
+  <link>http://example.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/</link>
+  <pubDate>Mon, 15 Apr 2019 01:28:08 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://example.org/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9/</guid>
+  <description><![CDATA[]]></description>
+</item><item>
+  <title>HTTP</title>
+  <link>http://example.org/tags/http/</link>
+  <pubDate>Mon, 12 Mar 2018 01:00:23 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://example.org/tags/http/</guid>
+  <description><![CDATA[]]></description>
+</item><item>
+  <title>学习笔记</title>
+  <link>http://example.org/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+  <pubDate>Mon, 12 Mar 2018 01:00:23 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://example.org/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+  <description><![CDATA[]]></description>
+</item><item>
+  <title>导航</title>
+  <link>http://example.org/tags/%E5%AF%BC%E8%88%AA/</link>
+  <pubDate>Tue, 14 Feb 2017 01:00:23 &#43;0800</pubDate>
+  <author>作者</author>
+  <guid>http://example.org/tags/%E5%AF%BC%E8%88%AA/</guid>
+  <description><![CDATA[]]></description>
+</item></channel>
+</rss>
