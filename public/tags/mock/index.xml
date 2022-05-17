@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Mock - 标签 - Jam&#39;s Note</title>
+    <link>http://example.org/tags/mock/</link>
+    <description>Mock - 标签 - Jam&#39;s Note</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 17 May 2022 22:54:26 &#43;0800</lastBuildDate><atom:link href="http://example.org/tags/mock/" rel="self" type="application/rss+xml" /><item>
+  <title>Mockjs教程</title>
+  <link>http://example.org/posts/mockjs%E6%95%99%E7%A8%8B/</link>
+  <pubDate>Tue, 17 May 2022 22:54:26 &#43;0800</pubDate>
+  <author>Jam</author>
+  <guid>http://example.org/posts/mockjs%E6%95%99%E7%A8%8B/</guid>
+  <description><![CDATA[]]></description>
+</item></channel>
+</rss>
